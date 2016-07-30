@@ -1,0 +1,7 @@
+# Region: US East (N. Virginia) - Instance types - Medium through Double Extra large
+#CPU (ECU)	MEMORY(GB)	STORAGE(GB)	INSTANCE_PRICE($)
+2	3.75	410	0.130
+4	7.5	850	0.260
+8	15	1690	0.520
+13	15	0	0.58
+26	30	0	1.16
