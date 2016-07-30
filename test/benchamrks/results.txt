@@ -1,0 +1,337 @@
+t1.micro: up to 2 ECUs - 1vCPUs - 0.613 GiB - EBS only - Very low network performance
+	Workload1:
+		USING 1GB of memory 10 reps
+
+		1) 250.51user 133.22system 52:42.66elapsed 12%CPU (0avgtext+0avgdata 2273264maxresident)k
+		61217752inputs+0outputs (970685major+11943030minor)pagefaults 0swaps
+
+		2) 249.66user 129.18system 54:02.21elapsed 11%CPU (0avgtext+0avgdata 2273856maxresident)k
+		61420296inputs+0outputs (974069major+11967397minor)pagefaults 0swaps
+
+		3) 587.23user 291.69system 57:13.46elapsed 25%CPU (0avgtext+0avgdata 2273264maxresident)k
+		62038424inputs+0outputs (984399major+12025454minor)pagefaults 0swaps
+
+		4)408.48user 212.76system 58:46.29elapsed 17%CPU (0avgtext+0avgdata 2270256maxresident)k
+		62155808inputs+0outputs (988306major+12029093minor)pagefaults 0swaps
+
+		5)411.02user 217.31system 56:17.96elapsed 18%CPU (0avgtext+0avgdata 2273968maxresident)k
+		61228632inputs+0outputs (972961major+11932815minor)pagefaults 0swaps
+
+		6)577.11user 296.76system 59:03.21elapsed 24%CPU (0avgtext+0avgdata 2273280maxresident)k
+		61537192inputs+0outputs (980257major+11953245minor)pagefaults 0swaps
+
+		7)337.40user 171.97system 1:00:29elapsed 14%CPU (0avgtext+0avgdata 2274064maxresident)k
+		61651880inputs+0outputs (980718major+11975306minor)pagefaults 0swaps
+
+		8)405.13user 213.10system 58:36.45elapsed 17%CPU (0avgtext+0avgdata 2274224maxresident)k
+		61648520inputs+0outputs (981590major+11975718minor)pagefaults 0swaps
+
+		9)565.21user 297.56system 59:24.07elapsed 24%CPU (0avgtext+0avgdata 2272912maxresident)k
+		62631128inputs+0outputs (996561major+12078677minor)pagefaults 0swaps
+
+		10)395.71user 206.57system 55:22.17elapsed 18%CPU (0avgtext+0avgdata 2273408maxresident)k
+		60658192inputs+0outputs (964572major+11870992minor)pagefaults 0swaps
+
+	Workload2:
+		1GB 1 rep - Not finished after
+		4.82user 330.66system 20:02:08elapsed 0%CPU (0avgtext+0avgdata 2242672maxresident)k
+		147029888inputs+0outputs (5090416major+1612753minor)pagefaults 0swaps
+
+		600MB 1 rep - Not finised after
+		263.74user 1823.17system 20:01:22elapsed 2%CPU (0avgtext+0avgdata 2245248maxresident)k
+		1016695048inputs+0outputs (40754288major+40660655minor)pagefaults 0swaps
+
+	Workload3:
+		USING 1GB of memory 10 reps
+
+		919.28user 539.61system 2:13:13elapsed 18%CPU (0avgtext+0avgdata 2270960maxresident)k
+		62250368inputs+0outputs (990942major+12046942minor)pagefaults 0swaps
+
+		4) 846.99user 452.51system 2:44:47elapsed 13%CPU (0avgtext+0avgdata 2272224maxresident)k
+		62186520inputs+0outputs (986005major+12053619minor)pagefaults 0swap
+
+		6) 891.49user 475.38system 2:36:50elapsed 14%CPU (0avgtext+0avgdata 2270688maxresident)k
+		62204032inputs+0outputs (986044major+12058577minor)pagefaults 0swaps
+
+		7) 881.59user 454.13system 2:47:04elapsed 13%CPU (0avgtext+0avgdata 2271872maxresident)k
+		61680408inputs+0outputs (980338major+11984360minor)pagefaults 0swaps
+
+		1675.82user 972.22system 4:02:18elapsed 18%CPU (0avgtext+0avgdata 2271520maxresident)k
+		63393440inputs+0outputs (1005093major+12183575minor)pagefaults 0swaps
+
+	Workload4:
+		No need to run - is going to be slower than workload 2
+
+	Matrix-transpose:
+		Uses mmap - not handled by CUDSwap. Future work: handle mmap
+
+	uclust:
+		94% 2000000 seqs
+
+		8320.96user 68.94system 2:30:30elapsed 92%CPU (0avgtext+0avgdata 2242736maxresident)k
+		1813000inputs+606304outputs (15509major+212588minor)pagefaults 0swaps
+
+		94% 1000000.fna
+		
+		4086.46user 47.37system 1:16:43elapsed 89%CPU (0avgtext+0avgdata 2244752maxresident)k
+		1441480inputs+301624outputs (15732major+210884minor)pagefaults 0swaps
+
+		4066.03user 45.10system 1:17:11elapsed 88%CPU (0avgtext+0avgdata 2246448maxresident)k
+		1261464inputs+301648outputs (12584major+203836minor)pagefaults 0swaps
+
+		4185.40user 44.44system 1:18:57elapsed 89%CPU (0avgtext+0avgdata 2246096maxresident)k
+		1249984inputs+301608outputs (12384major+201272minor)pagefaults 0swaps
+
+		4165.05user 46.21system 1:18:05elapsed 89%CPU (0avgtext+0avgdata 2241504maxresident)k
+		1256600inputs+301592outputs (12524major+201508minor)pagefaults 0swaps
+
+		4132.76user 45.72system 1:17:43elapsed 89%CPU (0avgtext+0avgdata 2240736maxresident)k
+		1310720inputs+301976outputs (13765major+201250minor)pagefaults 0swaps
+
+
+
+m1.small: 1 ECUs - 1vCPU - 1.7 GiB - 160 GiB - Low network performance
+	Workload1:
+		USING 1GB of memory 10 reps - COMPARE against micro - w/o CUDSwap
+		
+		480.72user 30.11system 8:30.84elapsed 99%CPU (0avgtext+0avgdata 4294256maxresident)k
+		0inputs+0outputs (0major+2666381minor)pagefaults 0swaps
+
+		478.63user 29.44system 8:28.08elapsed 99%CPU (0avgtext+0avgdata 4294256maxresident)k
+		0inputs+0outputs (0major+2666381minor)pagefaults 0swaps
+		
+		477.26user 29.50system 8:26.77elapsed 99%CPU (0avgtext+0avgdata 4294256maxresident)k
+		0inputs+0outputs (0major+2666382minor)pagefaults 0swaps
+		
+		478.33user 30.23system 8:28.58elapsed 99%CPU (0avgtext+0avgdata 4294256maxresident)k
+		0inputs+0outputs (0major+2666381minor)pagefaults 0swaps
+		
+		477.79user 29.69system 8:27.49elapsed 99%CPU (0avgtext+0avgdata 4294256maxresident)k
+		0inputs+0outputs (0major+2666381minor)pagefaults 0swaps
+		
+		477.85user 29.31system 8:27.19elapsed 99%CPU (0avgtext+0avgdata 4294240maxresident)k
+		0inputs+0outputs (0major+2666380minor)pagefaults 0swaps
+		
+		478.16user 29.64system 8:27.81elapsed 99%CPU (0avgtext+0avgdata 4294256maxresident)k
+		0inputs+0outputs (0major+2666381minor)pagefaults 0swaps
+		
+		479.32user 29.78system 8:29.11elapsed 99%CPU (0avgtext+0avgdata 4294256maxresident)k
+		0inputs+0outputs (0major+2666382minor)pagefaults 0swaps
+		
+		487.30user 29.98system 8:37.29elapsed 99%CPU (0avgtext+0avgdata 4294256maxresident)k
+		0inputs+0outputs (0major+2666381minor)pagefaults 0swaps
+		
+		478.94user 29.68system 8:28.70elapsed 99%CPU (0avgtext+0avgdata 4294256maxresident)k
+		0inputs+0outputs (0major+2666382minor)pagefaults 0swaps
+
+		USING 2GB of memory 10 reps - COMPARE against medium
+
+		588.81user 268.91system 1:16:00elapsed 18%CPU (0avgtext+0avgdata 6537072maxresident)k
+		107167952inputs+0outputs (1689591major+22284100minor)pagefaults 0swaps
+
+		577.14user 238.04system 1:17:27elapsed 17%CPU (0avgtext+0avgdata 6538544maxresident)k
+		105807056inputs+0outputs (1667247major+22004805minor)pagefaults 0swaps
+
+		540.14user 244.11system 1:13:49elapsed 17%CPU (0avgtext+0avgdata 6542016maxresident)k
+		109767928inputs+0outputs (1729385major+22526488minor)pagefaults 0swaps
+
+		535.47user 235.51system 1:19:59elapsed 16%CPU (0avgtext+0avgdata 6537824maxresident)k
+		106424992inputs+0outputs (1674467major+22153864minor)pagefaults 0swaps
+
+		517.50user 237.53system 1:28:30elapsed 14%CPU (0avgtext+0avgdata 6538352maxresident)k
+		112225264inputs+0outputs (1764903major+22836709minor)pagefaults 0swaps
+
+
+	Workload2:
+		1GB 1 rep - Not finished after - COMPARE against micro
+		975.90user 2.94system 16:18.85elapsed 99%CPU (0avgtext+0avgdata 4294064maxresident)k
+		0inputs+0outputs (0major+268461minor)pagefaults 0swaps
+
+		600MB 1 rep - Not finised after - COMPARE against micro
+		480.50user 1.79system 8:02.29elapsed 100%CPU (0avgtext+0avgdata 2516800maxresident)k
+		0inputs+0outputs (0major+157373minor)pagefaults 0swaps
+
+	Workload3:
+		USING 1GB of memory 10 reps - COMPARE against micro
+		477.27user 29.35system 16:41.70elapsed 50%CPU (0avgtext+0avgdata 4294256maxresident)k
+		32inputs+0outputs (0major+2666382minor)pagefaults 0swaps
+
+		480.43user 29.97system 17:00.86elapsed 49%CPU (0avgtext+0avgdata 4294256maxresident)k
+		0inputs+0outputs (0major+2666381minor)pagefaults 0swaps
+
+		484.44user 30.10system 17:09.14elapsed 49%CPU (0avgtext+0avgdata 4294256maxresident)k
+		0inputs+0outputs (0major+2666381minor)pagefaults 0swaps
+
+		481.55user 29.66system 17:02.45elapsed 49%CPU (0avgtext+0avgdata 4294256maxresident)k
+		0inputs+0outputs (0major+2666381minor)pagefaults 0swaps
+
+		479.47user 30.01system 16:59.01elapsed 49%CPU (0avgtext+0avgdata 4294240maxresident)k
+		0inputs+0outputs (0major+2666380minor)pagefaults 0swaps
+
+		481.00user 29.80system 17:01.59elapsed 50%CPU (0avgtext+0avgdata 4294256maxresident)k
+		0inputs+0outputs (0major+2666382minor)pagefaults 0swaps
+
+		USING 2GB of memory 10 reps - COMPARE against medium
+
+		1056.46user 524.82system 2:19:02elapsed 18%CPU (0avgtext+0avgdata 6540512maxresident)k
+		97812968inputs+0outputs (1537644major+20995392minor)pagefaults 0swaps
+
+		1056.60user 503.53system 2:09:02elapsed 20%CPU (0avgtext+0avgdata 6542320maxresident)k
+		93003240inputs+0outputs (1464087major+20490714minor)pagefaults 0swaps
+
+		1057.31user 500.62system 2:12:39elapsed 19%CPU (0avgtext+0avgdata 6542592maxresident)k
+		91118200inputs+0outputs (1434350major+20235563minor)pagefaults 0swaps
+
+		1059.97user 520.84system 2:11:49elapsed 19%CPU (0avgtext+0avgdata 6544016maxresident)k
+		99842960inputs+0outputs (1569450major+21223671minor)pagefaults 0swaps
+
+		1050.32user 504.37system 2:07:38elapsed 20%CPU (0avgtext+0avgdata 6544688maxresident)k
+		98116096inputs+0outputs (1542132major+21095012minor)pagefaults 0swaps
+
+	Workload4:
+		No need to run - is going to be slower than workload 2 - COMPARE against micro
+
+	uclust:
+		94% 1000000 seqs - COMPARE against micro
+
+		1059.13user 4.42system 18:00.43elapsed 98%CPU (0avgtext+0avgdata 2736880maxresident)k
+		534464inputs+300800outputs (11major+175887minor)pagefaults 0swaps
+		
+		1072.41user 4.57system 18:08.16elapsed 98%CPU (0avgtext+0avgdata 2737488maxresident)k
+		0inputs+300800outputs (0major+175937minor)pagefaults 0swaps
+		
+		1059.72user 4.52system 17:55.31elapsed 98%CPU (0avgtext+0avgdata 2737136maxresident)k
+		0inputs+300816outputs (0major+175913minor)pagefaults 0swaps
+		
+		1057.51user 4.61system 17:51.94elapsed 99%CPU (0avgtext+0avgdata 2737072maxresident)k
+		0inputs+300816outputs (0major+175911minor)pagefaults 0swaps
+		
+		1056.75user 4.21system 17:48.54elapsed 99%CPU (0avgtext+0avgdata 2738096maxresident)k
+		0inputs+300824outputs (0major+175976minor)pagefaults 0swaps
+		
+		1058.95user 4.15system 17:50.42elapsed 99%CPU (0avgtext+0avgdata 2737120maxresident)k
+		192inputs+300808outputs (1major+175918minor)pagefaults 0swaps
+		
+		1072.81user 4.24system 18:04.92elapsed 99%CPU (0avgtext+0avgdata 2736320maxresident)k
+		0inputs+300824outputs (0major+175862minor)pagefaults 0swaps
+		
+		1058.60user 3.97system 17:49.18elapsed 99%CPU (0avgtext+0avgdata 2736880maxresident)k
+		0inputs+300800outputs (0major+175902minor)pagefaults 0swaps
+		
+		1071.95user 4.39system 18:13.07elapsed 98%CPU (0avgtext+0avgdata 2737088maxresident)k
+		0inputs+300816outputs (0major+175912minor)pagefaults 0swaps
+
+		1068.56user 4.73system 18:07.28elapsed 98%CPU (0avgtext+0avgdata 2737648maxresident)k
+		176inputs+300816outputs (1major+175948minor)pagefaults 0swaps
+
+		99% 1000000 seqs - COMPARE against medium
+
+		4508.95user 26.39system 1:32:54elapsed 81%CPU (0avgtext+0avgdata 6514784maxresident)k
+		3811624inputs+294848outputs (58275major+684163minor)pagefaults 0swaps
+
+		4475.34user 26.60system 1:30:50elapsed 82%CPU (0avgtext+0avgdata 6514080maxresident)k
+		3760424inputs+294888outputs (57852major+681020minor)pagefaults 0swaps
+
+		4514.68user 28.48system 1:29:52elapsed 84%CPU (0avgtext+0avgdata 6520896maxresident)k
+		3834944inputs+294832outputs (57873major+680793minor)pagefaults 0swaps
+
+		4642.37user 28.61system 1:28:08elapsed 88%CPU (0avgtext+0avgdata 6520560maxresident)k
+		3822424inputs+294856outputs (57737major+680556minor)pagefaults 0swaps
+
+		4464.72user 27.86system 1:33:05elapsed 80%CPU (0avgtext+0avgdata 6520896maxresident)k
+		3860664inputs+294864outputs (58849major+680712minor)pagefaults 0swaps
+
+
+
+m1.medium: 2 ECUs - 1vCPU - 3.7 GiB - 410 GiB - Moderate network performance
+
+	Workload1:
+		USING 2GB of memory 10 reps - COMPARE against small - w/o CUDSwap
+
+		437.95user 36.54system 7:54.52elapsed 99%CPU (0avgtext+0avgdata 8586912maxresident)k
+		32inputs+0outputs (0major+5332876minor)pagefaults 0swaps
+
+		437.64user 36.23system 7:53.90elapsed 99%CPU (0avgtext+0avgdata 8586912maxresident)k
+		0inputs+0outputs (0major+5332876minor)pagefaults 0swaps
+
+		437.89user 35.96system 7:53.89elapsed 99%CPU (0avgtext+0avgdata 8586912maxresident)k
+		0inputs+0outputs (0major+5332877minor)pagefaults 0swaps
+
+		437.83user 36.03system 7:53.90elapsed 99%CPU (0avgtext+0avgdata 8586896maxresident)k
+		0inputs+0outputs (0major+5332875minor)pagefaults 0swaps
+
+		438.18user 35.75system 7:53.97elapsed 99%CPU (0avgtext+0avgdata 8586912maxresident)k
+		0inputs+0outputs (0major+5332876minor)pagefaults 0swaps
+
+		USING 2GB of memory 10 reps - COMPARE against medium - w CUDSwap
+		437.75user 36.77system 7:54.61elapsed 99%CPU (0avgtext+0avgdata 8586928maxresident)k
+		0inputs+0outputs (0major+5332877minor)pagefaults 0swaps
+
+		437.90user 36.62system 7:54.63elapsed 99%CPU (0avgtext+0avgdata 8586928maxresident)k
+		0inputs+0outputs (0major+5332877minor)pagefaults 0swaps
+
+		437.63user 37.05system 7:54.79elapsed 99%CPU (0avgtext+0avgdata 8586928maxresident)k
+		0inputs+0outputs (0major+5332877minor)pagefaults 0swaps
+
+		437.41user 37.01system 7:54.52elapsed 99%CPU (0avgtext+0avgdata 8586928maxresident)k
+		0inputs+0outputs (0major+5332877minor)pagefaults 0swaps
+
+		437.81user 36.41system 7:54.27elapsed 99%CPU (0avgtext+0avgdata 8586928maxresident)k
+		0inputs+0outputs (0major+5332878minor)pagefaults 0swaps
+
+	Workload2:
+
+	Workload3:
+		USING 2GB of memory 10 reps - COMPARE against small - w/o CUDSwap
+
+		439.79user 35.89system 15:44.30elapsed 50%CPU (0avgtext+0avgdata 8586896maxresident)k
+		0inputs+0outputs (0major+5332875minor)pagefaults 0swaps
+
+		502.97user 35.85system 17:57.72elapsed 49%CPU (0avgtext+0avgdata 8586912maxresident)k
+		0inputs+0outputs (0major+5332876minor)pagefaults 0swaps
+
+		439.28user 35.54system 15:49.71elapsed 49%CPU (0avgtext+0avgdata 8586912maxresident)k
+		0inputs+0outputs (0major+5332876minor)pagefaults 0swaps
+
+		437.40user 35.38system 15:45.75elapsed 49%CPU (0avgtext+0avgdata 8586928maxresident)k
+		0inputs+0outputs (0major+5332877minor)pagefaults 0swaps
+
+		437.55user 35.48system 15:46.20elapsed 49%CPU (0avgtext+0avgdata 8586928maxresident)k
+		0inputs+0outputs (0major+5332877minor)pagefaults 0swaps
+
+	Workload4:
+
+	uclust:
+		99% 1000000 seqs - COMPARE against small - w/o CUDSwap
+
+		2248.24user 6.36system 37:51.74elapsed 99%CPU (0avgtext+0avgdata 9565824maxresident)k
+		842688inputs+294208outputs (0major+612086minor)pagefaults 0swaps
+
+		2239.62user 6.39system 37:36.79elapsed 99%CPU (0avgtext+0avgdata 9560960maxresident)k
+		0inputs+294216outputs (0major+611803minor)pagefaults 0swaps
+
+		2241.30user 6.88system 37:38.35elapsed 99%CPU (0avgtext+0avgdata 9563440maxresident)k
+		0inputs+294192outputs (0major+611940minor)pagefaults 0swaps
+
+		2245.86user 6.70system 37:42.86elapsed 99%CPU (0avgtext+0avgdata 9562752maxresident)k
+		0inputs+294168outputs (0major+611909minor)pagefaults 0swaps
+
+		2241.38user 6.95system 37:38.99elapsed 99%CPU (0avgtext+0avgdata 9564624maxresident)k
+		0inputs+294192outputs (0major+612033minor)pagefaults 0swaps
+
+		99% 1000000 seqs - COMPARE against medium - w/ CUDSwap
+
+		2239.19user 5.85system 37:33.26elapsed 99%CPU (0avgtext+0avgdata 9564576maxresident)k
+		0inputs+294208outputs (0major+611988minor)pagefaults 0swaps
+
+		2241.71user 6.76system 37:38.93elapsed 99%CPU (0avgtext+0avgdata 9562560maxresident)k
+		0inputs+294192outputs (0major+611870minor)pagefaults 0swaps
+
+		2236.17user 7.02system 37:34.07elapsed 99%CPU (0avgtext+0avgdata 9562448maxresident)k
+		0inputs+294176outputs (0major+611909minor)pagefaults 0swaps
+
+		2244.38user 7.10system 37:42.54elapsed 99%CPU (0avgtext+0avgdata 9562000maxresident)k
+		0inputs+294208outputs (0major+611871minor)pagefaults 0swaps
+
+		2247.13user 6.90system 37:44.58elapsed 99%CPU (0avgtext+0avgdata 9567488maxresident)k
+		0inputs+294208outputs (0major+612163minor)pagefaults 0swaps
